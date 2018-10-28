@@ -2,6 +2,9 @@
 
 
 #### 1. Bobo the amoeba has a 25%, 25%, and 50% chance of producing 0, 1, or 2 o spring, respectively. Each of Bobo’s descendants also have the same probabilities. What is the probability that Bobo’s lineage dies out?
+  - Bobo's lineage dies out if all of his children's lineages die out. The probability that Bobo's lineage dies out immediately is 1/4. If Bobo has one child, the probability that his lineage dies out is 1/4 * P, where P is Bobo's probability of dying out (since Bobo's children have the same chances). Similarly, if Bobo has 2 children, he has a 1/2 * P^2 chance of dying out, since both of the new lineages need to die out. Putting all this together gives:
+P = 1/4 + 1/4P + 1/2P^2
+Solving the quadratic gives P = 1/2.
   - p=1/4+1/4*p+1/2*p^2 => p=1/2
 #### 2. In any 15-minute interval, there is a 20% probability that you will see at least one shooting star. What is the proba- bility that you see at least one shooting star in the period of an hour?
   - 1-(0.8)^4. Or, we can use Poisson processes
