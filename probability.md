@@ -25,6 +25,8 @@ The result is between 0 (000) and 7 (111), evenly spread (3 independent throw). 
 #### 9. How many ways can you split 12 people into 3 teams of 4?
   - the outcome follows a multinomial distribution with n=12 and k=3. but the classes are indistinguishable
 #### 10. Your hash function assigns each object to a number between 1:10, each with equal probability. With 10 objects, what is the probability of a hash collision? What is the expected number of hash collisions? What is the expected number of hashes that are unused.
+
+ https://www.quora.com/Your-hash-function-assigns-each-object-to-a-number-between-1-10-each-with-equal-probability-With-10-objects-what-is-the-probability-of-a-hash-collision-What-is-the-expected-number-of-hash-collisions-What-is-the-expected-number-of-hashes-that-are-unused
   - the probability of a hash collision: 1-(10!/10^10)
   - the expected number of hash collisions: 1-10*(9/10)^10
   - the expected number of hashes that are unused: 10*(9/10)^10
@@ -34,8 +36,11 @@ The result is between 0 (000) and 7 (111), evenly spread (3 independent throw). 
 #### 12. I write a program should print out all the numbers from 1 to 300, but prints out Fizz instead if the number is divisible by 3, Buzz instead if the number is divisible by 5, and FizzBuzz if the number is divisible by 3 and 5. What is the total number of numbers that is either Fizzed, Buzzed, or FizzBuzzed?
   - 100+60-20=140
 #### 13. On a dating site, users can select 5 out of 24 adjectives to describe themselves. A match is declared between two users if they match on at least 4 adjectives. If Alice and Bob randomly pick adjectives, what is the probability that they form a match?
+  - We can apply the naive definition of probability, with the numerator being the number of ways that Bob can match Alice on 4 out of 5 adjectives, plus the number of ways that Bob can match Alice on 5 out of 5 adjectives. The denominator is just the number of possible adjective combinations that Bob can recieve.
   - 24C5*(1+5(24-5))/24C5*24C5 = 4/1771
 #### 14. A lazy high school senior types up application and envelopes to n different colleges, but puts the applications randomly into the envelopes. What is the expected number of applications that went to the right college?
+  - Let Xi=1 if the ith envelope goes into its envelope and let it equal zero otherwise.  Notice that P(Xi=1)=1n for all i=1,2,…,n.  So, E(Xi)=1n for all i=1,2,…,n.
+  https://www.quora.com/A-lazy-high-school-senior-types-up-an-application-and-envelopes-to-n-different-colleges-but-puts-the-applications-randomly-into-the-envelopes-What-is-the-expected-number-of-applications-that-went-to-the-right-college
   - 1
 #### 15. Let’s say you have a very tall father. On average, what would you expect the height of his son to be? Taller, equal, or shorter? What if you had a very short father?
   - Shorter. Regression to the mean
@@ -44,6 +49,7 @@ The result is between 0 (000) and 7 (111), evenly spread (3 independent throw). 
   - less than $3
 #### 18. You have two coins, one of which is fair and comes up heads with a probability 1/2, and the other which is biased and comes up heads with probability 3/4. You randomly pick coin and flip it twice, and get heads both times. What is the probability that you picked the fair coin?
   - 4/13
+  - https://www.quora.com/You-have-two-coins-one-of-which-is-fair-and-comes-up-heads-with-a-probability-1-2-and-the-other-which-is-biased-and-comes-up-heads-with-probability-3-4-You-randomly-pick-coin-and-flip-it-twice-and-get-heads-both-times-What-is-the-probability-that-you-picked-the-fair-coin
 #### 19. You have a 0.1% chance of picking up a coin with both heads, and a 99.9% chance that you pick up a fair coin. You flip your coin and it comes up heads 10 times. What’s the chance that you picked up the fair coin, given the information that you observed?
   * Events: F = "picked a fair coin", T = "10 heads in a row"
   * (1) P(F|T) = P(T|F)P(F)/P(T) (Bayes formula)
