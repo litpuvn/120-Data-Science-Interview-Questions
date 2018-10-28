@@ -32,6 +32,7 @@ When could it make your algorithms run slower?
   -
 
 #### 10. Why might a join on a subquery be slow? How might you speed it up?
+  - My understanding of subqueries is that especially with correlated subqueries where the is dependent on the outer query, the correlated subquery requires more or one values to be passed to it by the outer query before the subquery can be resolved. This means that you need to process the subquery more times, one for each row in the outer query.
   - Change the subquery to a join.
 #### 11. Describe the difference between primary keys and foreign keys in a SQL database.
   - Primary keys are columns whose value combinations must be unique in a specific table so that each row can be referenced uniquely. Foreign keys are columns that references columns (often primary keys) in other tables.
